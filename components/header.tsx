@@ -9,9 +9,10 @@ export function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#171635] text-white border-b border-white/10">
-      <div className="relative mx-auto max-w-350 px-6 py-6 flex items-center">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#171635] text-white border-b border-white/10 overflow-visible">
+      <div className="relative mx-auto max-w-350 px-6 py-6 flex items-center justify-between">
 
+        {/* Logo */}
         <Link href="/" className="text-xl font-bold shrink-0">
           <Image
             src="/abhiwan.svg"
@@ -22,15 +23,17 @@ export function Header() {
           />
         </Link>
 
-        <nav 
-          className="hidden md:flex 
-          absolute left-1/2 -translate-x-1/2 
-          items-center 
-          gap-6 lg:gap-10
-          max-w-200
-          w-full
-          justify-center">
-          <Link href="#home" className="text-sm hover:text-[#D227FC] transition-colors">HOME</Link>
+        {/* Center nav (>= lg only) */}
+        <nav
+          className="
+            hidden lg:flex
+            absolute left-1/2 -translate-x-1/2
+            items-center gap-10
+          "
+        >
+          <Link href="#home" className="text-sm hover:text-[#D227FC] transition-colors">
+            HOME
+          </Link>
 
           <Link
             href="#services"
@@ -46,22 +49,35 @@ export function Header() {
               className="inline-block transition-transform duration-300 ease-in-out group-hover:-rotate-180"
             />
           </Link>
-          <Link href="#portfolio" className="text-sm hover:text-[#D227FC] transition-colors">PORTFOLIO</Link>
-          <Link href="#blog" className="text-sm hover:text-[#D227FC] transition-colors">BLOG</Link>
-          <Link href="#about" className="text-sm hover:text-[#D227FC] transition-colors">ABOUT US</Link>
-          <Link href="#contact" className="text-sm hover:text-[#D227FC] transition-colors">CONTACT US</Link>
+
+          <Link href="#portfolio" className="text-sm hover:text-[#D227FC] transition-colors">
+            PORTFOLIO
+          </Link>
+
+          <Link href="#blog" className="text-sm hover:text-[#D227FC] transition-colors">
+            BLOG
+          </Link>
+
+          <Link href="#about" className="text-sm hover:text-[#D227FC] transition-colors whitespace-nowrap">
+            ABOUT US
+          </Link>
+
+          <Link href="#contact" className="text-sm hover:text-[#D227FC] transition-colors whitespace-nowrap">
+            CONTACT US
+          </Link>
         </nav>
-        
-        <div className="ml-auto hidden md:block p-px bg-linear-to-r from-[#7300FF] to-[#cda4FF] rounded-2xl">
+
+        {/* CTA (>= lg only) */}
+        <div className="ml-auto hidden lg:block p-px bg-linear-to-r from-[#7300FF] to-[#cda4FF] rounded-2xl">
           <Button className="bg-radial from-[#525AFF] from-10% to-[#0900FF] to-90% text-white px-6 rounded-2xl">
             Free Quote
           </Button>
         </div>
 
-        {/* hamburger button */}
+        {/* Hamburger (< lg) */}
         <button
           onClick={() => setOpen(!open)}
-          className="ml-auto md:hidden flex flex-col gap-1.5"
+          className="ml-auto lg:hidden flex flex-col gap-1.5"
           aria-label="Toggle menu"
         >
           <span className="w-6 h-0.5 bg-white"></span>
@@ -70,11 +86,9 @@ export function Header() {
         </button>
       </div>
 
-
-
-      {/* for screens less than 768px */}
+      {/* Mobile / Tablet menu (< lg) */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out
+        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out
           ${open ? "max-h-125 opacity-100" : "max-h-0 opacity-0"}
         `}
       >
@@ -91,6 +105,27 @@ export function Header() {
           </Button>
         </nav>
       </div>
+
+      {/* Curved header bottom – centered, full-width */}
+      <div className="pointer-events-none absolute left-0 right-0 -bottom-[180px]">
+        <svg
+          viewBox="0 0 1440 180"
+          preserveAspectRatio="none"
+          className="w-full h-[180px]"
+        >
+          <path
+            d="
+              M0 0
+              C360 45 1080 45 1440 0
+              L1440 -1
+              L0 -1
+              Z
+            "
+            fill="#171635"
+          />
+        </svg>
+      </div>
+
     </header>
   )
 }
