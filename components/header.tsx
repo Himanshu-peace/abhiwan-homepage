@@ -9,7 +9,7 @@ export function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#171635] text-white border-b border-white/10 overflow-visible">
+    <header className="relative z-50 bg-[#171635] text-white border-b border-white/10 overflow-visible">
       <div className="relative mx-auto max-w-350 px-6 py-6 flex items-center justify-between">
 
         {/* Logo */}
