@@ -8,7 +8,7 @@ export function VisionSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center ">
           {/* right text cell */}
           <div className="z-20 md:ml-6 md:mb-30">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
               OUR{" "}
               <span className="text-transparent" style={{ WebkitTextStroke: "2px black" }}>
                 VISION
