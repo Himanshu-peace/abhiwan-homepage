@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button"
 
 export function VisionSection() {
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-gray-50 to-transparent rounded-l-[100px]" />
+    <section className="pt-10 bg-[#1a1f3a] relative overflow-hidden">
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+      <div className="container mx-auto max-w-none px-4 pt-15 relative z-10 bg-white rounded-tr-[200px]">
+        <div className="grid md:grid-cols-2 gap-12 items-center ">
+          {/* right text cell */}
+          <div className="z-20 md:ml-6 md:mb-30">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               OUR{" "}
               <span className="text-transparent" style={{ WebkitTextStroke: "2px black" }}>
@@ -22,15 +22,38 @@ export function VisionSection() {
             </p>
 
             <p className="text-gray-700 mb-8 leading-relaxed">
-              We believe success is a shared journey. When we empower our clients, partners, and teams to succeed,
+              We believe success is a shared journey. 
+              <br/>
+              When we empower our clients, partners, and teams to succeed,
               success follows naturally.
             </p>
-
-            <Button className="bg-[#3b5bff] hover:bg-[#2a4bef] text-white px-8">Let&apos;s Talk</Button>
+            <Button className="bg-radial from-[#525AFF] from-10% to-[#0900FF] to-90% text-white rounded-2xl px-8">Let&apos;s Talk
+              <img
+                src="/vision-talk.svg"
+                alt="toggle"
+                width={19}
+                height={19}
+                className="inline-block transition-transform duration-300 ease-in-out group-hover:-rotate-180"
+              />
+            </Button>
           </div>
-
-          <div className="flex justify-center">
-            <img src="/3d-character-jumping-excited.jpg" alt="3D Character" className="w-96 h-96 object-contain" />
+          {/* left boy image cell */}
+          <div className="flex justify-center md:mr-15 md:mb-25 lg:mr-20 lg:mb-30">
+            {/* 3D rotating circle */}
+            <img
+              src="/vision-rotate-ball.png"
+              alt="3D rotating circle"
+              className="
+                absolute
+                sm:w-100 sm:h-100
+                md:w-110 md:h-110
+                lg:w-120 lg:h-120
+                object-contain
+                animate-[rotate-drift_8s_linear_infinite]
+                origin-center
+              "
+            />
+            <img src="/vision-boy.png" alt="3D Character" className="sm:w-70 sm:h-70 md:w-80 md:h-80 lg:w-90 lg:h-90 object-contain z-10" />
           </div>
         </div>
       </div>
