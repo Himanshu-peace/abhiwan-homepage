@@ -107,7 +107,7 @@ export function Header() {
       </div>
 
       {/* Curved header bottom – centered, full-width */}
-      <div className="pointer-events-none absolute left-0 right-0 -bottom-[180px]">
+      <div className="pointer-events-none absolute left-0 right-0 -bottom-45">
         <svg
           viewBox="0 0 1440 180"
           preserveAspectRatio="none"
