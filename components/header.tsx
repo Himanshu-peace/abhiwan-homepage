@@ -111,7 +111,7 @@ export function Header() {
         <svg
           viewBox="0 0 1440 180"
           preserveAspectRatio="none"
-          className="w-full h-[180px]"
+          className="w-full h-45"
         >
           <path
             d="
@@ -125,7 +125,6 @@ export function Header() {
           />
         </svg>
       </div>
-
     </header>
   )
 }

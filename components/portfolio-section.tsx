@@ -62,9 +62,9 @@ export function PortfolioSection() {
                   rounded-2xl
                   md:transition-all md:duration-500 md:ease-in-out
 
-                  h-[260px]
-                  md:h-[360px]
-                  xl:h-[480px]
+                  h-65
+                  md:h-90
+                  xl:h-120
 
                   md:flex-[0_0_135px]
                   lg:flex-[0_0_180px]
