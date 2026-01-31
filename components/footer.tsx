@@ -46,6 +46,10 @@ export function Footer() {
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Contact Us
                 </Link>
+              </li>              <li>
+                <Link href="/thank-you" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Thank You
+                </Link>
               </li>
             </ul>
           </div>

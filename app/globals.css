@@ -165,3 +165,40 @@
   }
 }
 
+@source "../app/**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+
+@theme {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-futura: "Futura PT", system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/FuturaPT-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/FuturaPT-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/FuturaPT-Demi.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer utilities {
+  .animate-spin-fast {
+    animation: spin 3s linear infinite;
+  }
+}

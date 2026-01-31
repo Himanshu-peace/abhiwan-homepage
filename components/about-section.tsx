@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 
 export function AboutSection() {
   return (
-    <section className="relative bg-white overflow-visible ">
+    <section id="about" className=" relative bg-white overflow-visible ">
       {/* Inverted curve – About to Hero */}
       <div className="pointer-events-none absolute top-0 left-0 right-0 z-30 -translate-y-full">
         <svg
