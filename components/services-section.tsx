@@ -71,14 +71,14 @@ export function ServicesSection() {
           {/* bottom grid – pulled up */}
           <div className="grid grid-cols-1 md:grid-cols-[30%_70%] md:gap-10 items-center gap-10 md:ml-20  ">
             {/* Services list */}
-            <div className="space-y-0 md:ml-10 order-2 md:order-none">
+            <div className="space-y-0 md:ml-10 order-2 md:order-0">
               {services.slice(5).map((service, index) => (
                 <div
                   key={index}
                   className="flex items-center gap-4 py-4 border-b border-[#E88BFF] group cursor-pointer"
                 >
                   <span
-                    className="min-w-[36px] text-2xl font-bold text-[#1a1f3a]"
+                    className="min-w-9 text-2xl font-bold text-[#1a1f3a]"
                     style={{ WebkitTextStroke: "1px #E88BFF" }}
                   >
                     {String(index + 6).padStart(2, "0")}
@@ -92,11 +92,11 @@ export function ServicesSection() {
             </div>
 
             {/* Image */}
-            <div className="flex justify-center order-1 md:order-none">
+            <div className="flex justify-center order-1 md:order-0">
               <img
                 src="/services-dragon-ground.png"
                 alt="3D Dragon Character"
-                className="w-[260px] sm:w-[320px] md:w-180 h-auto object-contain"
+                className="w-65 sm:w-[320px] md:w-180 h-auto object-contain"
               />
             </div>
           </div>

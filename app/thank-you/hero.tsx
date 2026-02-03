@@ -69,7 +69,7 @@ function HeroSection() {
           {/* RIGHT IMAGES */}
           {/* Grid */}
           <div className="relative lg:mt-15">
-            <div className="grid grid-cols-[25%_50%_25%] grid-rows-2 gap-4 justify-center">
+            <div className="grid grid-cols-2 grid-rows-2 gap-12 sm:grid-cols-[25%_50%_25%] sm:grid-rows-2 sm:gap-4 justify-center">
               <div className="h-76.25 w-full overflow-hidden rounded-2xl">
                 <img
                   src="/frame1.png"
@@ -77,7 +77,7 @@ function HeroSection() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="h-76.25 w-full overflow-hidden rounded-2xl">
+              <div className="h-76.25 w-full overflow-hidden rounded-2xl hidden sm:block ">
                 <img
                   src="/frame2.png"
                   alt="Frame 2"
@@ -98,7 +98,7 @@ function HeroSection() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="h-76.25 w-full overflow-hidden rounded-2xl">
+              <div className="h-76.25 w-full overflow-hidden rounded-2xl hidden sm:block ">
                 <img
                   src="/frame5.png"
                   alt="Frame 5"
@@ -122,8 +122,10 @@ function HeroSection() {
                   -translate-x-1/2
                   -translate-y-1/2
                   z-20
-                  h-30
-                  w-30
+                  h-20
+                  w-20
+                  sm:h-30
+                  sm:w-30
                   rounded-full
                   bg-white
                   flex

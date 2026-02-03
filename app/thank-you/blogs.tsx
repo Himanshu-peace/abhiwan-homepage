@@ -2,7 +2,7 @@
 
 export function Blogs()  {
   return (
-    <section className="relative overflow-hidden bg-white mt-10">
+    <section className="relative overflow-hidden bg-white sm:mt-10 -mt-10">
       <div className="relative mx-10 px-2 py-16 md:py-5"> 
         <h2 className="font-sans mb-10 text-3xl font-bold text-gray-900">
           Recent Blogs
@@ -33,10 +33,10 @@ export function Blogs()  {
               </span>
             </div>
 
-            <h3 className="text-3xl font-medium leading-snug text-[#3D3D3D]">
+            <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium leading-snug text-[#3D3D3D]">
               What Is a Digital Twin in 
-              <br />Agriculture? Benefits & Uses 
-              <br />Explained
+              <br className="hidden sm:visible"/> Agriculture? Benefits & Uses 
+              <br className="hidden sm:visible"/> Explained
             </h3>
           </article>
 
@@ -63,8 +63,10 @@ export function Blogs()  {
               </span>
             </div>
 
-            <h3 className="text-3xl font-medium leading-snug text-[#3D3D3D]">
-              Revolution in Game Art styles <br />with the increase usage of AI <br /> and other tools.
+            <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium leading-snug text-[#3D3D3D]">
+              Revolution in Game Art styles 
+              <br className="hidden sm:visible"/> with the increase usage of AI 
+              <br className="hidden sm:visible"/> and other tools.
             </h3>
           </article>
 
@@ -91,8 +93,10 @@ export function Blogs()  {
               </span>
             </div>
 
-            <h3 className="text-3xl font-medium leading-snug text-[#3D3D3D]">
-              How to choose the best digital <br /> marketing agency for your <br />social media branding?
+            <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium leading-snug text-[#3D3D3D]">
+              How to choose the best digital 
+              <br className="hidden sm:visible"/> marketing agency for your 
+              <br className="hidden sm:visible"/> social media branding?
             </h3>
           </article>
         </div>
