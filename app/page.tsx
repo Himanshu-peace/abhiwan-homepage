@@ -16,7 +16,7 @@ import { Footer } from "@/components/footer"
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      <Header />
+      {/* <Header /> */}
       <HeroSection />
       <AboutSection />
       <ServicesSection />
@@ -28,7 +28,7 @@ export default function HomePage() {
       <WhyChooseUsSection />
       <TestimonialsSection />
       <CtaSection />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   )
 }

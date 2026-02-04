@@ -1,12 +1,23 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { futuraPT } from '../lib/fonts';
 
+import { ModalProvider } from "@/components/ModalContext"
+import { ServiceModalProvider } from "@/components/ServiceModalContext"
+import Header from "@/components/Header copy"
+import Footer from "@/components/footer copy"
+
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: "Abhiwan Technology - Where Imagination Becomes Innovation",
@@ -39,8 +50,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
-        {children}
+      <body className={`${inter.variable}  font-sans antialiased`}>
+        <ModalProvider>
+          <ServiceModalProvider>
+            <Header />
+            {children}
+            <Footer />
+          </ServiceModalProvider>
+        </ModalProvider>
         <Analytics />
       </body>
     </html>

@@ -1,6 +1,14 @@
 const config = {
   plugins: {
-    "@tailwindcss/postcss": {},
+    "@tailwindcss/postcss": {
+      theme: {
+        extend: {
+          fontFamily: {
+            futura: ["Futura PT", "sans-serif"],
+          },
+        },
+      },
+    },
   },
 };
 
